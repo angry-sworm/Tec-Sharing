@@ -1,2 +1,2 @@
-# Tec-Sharing
+# tec-sharing
 Tick after Work
