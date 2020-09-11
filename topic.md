@@ -1,8 +1,6 @@
 # 话题
 
 ## os&linux 
-* [测试](testing.md)
-* [目录测试](./testing/Readme.md)
 * 僵尸进程
 * 守护进程
 * linux内核定时器的实现方式
