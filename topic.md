@@ -17,6 +17,7 @@
 
 ## algorithm
 * 时间复杂度
+* 动态规划
 
 ## languge
 * 协程
