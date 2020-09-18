@@ -9,6 +9,7 @@
 * NAT原理
 * TCP的流量控制、拥塞控制、快速重传、window机制
 * accept干了什么
+* BGP
 
 ## database
 * 索引的机制
