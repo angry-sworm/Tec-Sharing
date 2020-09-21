@@ -16,7 +16,7 @@
 * 乐观锁、悲观锁
 
 ## algorithm
-* 时间复杂度
+* [时间复杂度](./docs/timeComplexy/timeComplexy.md)
 * 动态规划
 
 ## languge
