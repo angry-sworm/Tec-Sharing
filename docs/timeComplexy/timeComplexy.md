@@ -92,7 +92,7 @@
   ​                                        $O(1)$  <  $O(log N)$  <  $O(N)$  <  $O(N*log N)$  <  $O(N^2)$  <  $O(2^N)$  <  $O(N!)$  <  $O(N^N)$
 
 ## 渐进记号
-![image](./assets/asymptotic notation.png)
+![image](./assets/asymptoticNotation.png)
 
 ### $\Theta$ 记号
 * $\Theta$ 记号渐进地给出一个函数的上界和下界。
@@ -150,4 +150,4 @@
 
   2. 总结： 主方法是最好用的方法，书本上以 ”菜谱“ 来描述这种方法的好用之处，它可以瞬间估计一个递推式的算法复杂度，主方法依赖于下面的**主定理**。
   
-     ![image](./assets/master theorem.png)
+     ![image](./assets/masterTheorem.png)
