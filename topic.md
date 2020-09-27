@@ -35,7 +35,7 @@
 ## languge
 * 协程
 * [闭包](./docs/closure/closure.md)
-* 符号表
+* [符号表入门](./docs/symbol/symtab.md)
 * 引用与指针
 
 ## distribution
