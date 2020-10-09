@@ -19,6 +19,7 @@
 * IO 多路复用
 
 ## database
+* sql的语句执行过程
 * 索引的机制
 * [B+ 树](./docs/b+tree/b+tree.md)
 * 乐观锁、悲观锁
