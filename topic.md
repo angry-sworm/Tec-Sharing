@@ -5,7 +5,7 @@
 * 守护进程
 * linux内核定时器的实现方式
 * fs
-* interrupt
+* [interrupt](./docs/interrupt/interrupt.md)
 * 进程、线程通信
 * 同步、死锁
 
