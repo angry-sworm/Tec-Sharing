@@ -8,6 +8,7 @@
 * interrupt
 * 进程、线程通信
 * 同步、死锁
+* dma
 
 ## network
 * NAT原理
