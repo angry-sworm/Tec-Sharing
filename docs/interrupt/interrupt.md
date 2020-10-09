@@ -82,6 +82,7 @@
 | 9 | RCU\_SOFTIRQ       | 用于处理RCU中断，最低优先级，因此每次都在最后处理          |
 
 ```
+查看处理数据
 > cat /proc/softirqs 
                     CPU0       CPU1       CPU2       CPU3       CPU4       CPU5       CPU6       CPU7       
           HI:          1          1          0          0          2          0          0          0
@@ -94,6 +95,12 @@ BLOCK_IOPOLL:          0          0          0          0          0          0 
        SCHED: 2180338424 3965089846 2186628968 3875527819 2064144853 3883505174 2055440282 3857640088
      HRTIMER:          0          0          0          0          0          0          0          0
          RCU: 1458914748 1905483384 1524745564 1923565274 1462350009 1903291217 1446345827 1896192088
+
+查看执行进程
+> ps aux |grep ksoftirqd
+root          3  0.0  0.0      0     0 ?        S    Sep01   0:22 [ksoftirqd/0]
+root         14  0.0  0.0      0     0 ?        S    Sep01   2:13 [ksoftirqd/1]
+sandsto+ 111348  0.0  0.0 112816   972 pts/6    S+   21:57   0:00 grep --color=auto ksoftirqd
 ```
 
 * softirq implement 
