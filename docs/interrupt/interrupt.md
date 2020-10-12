@@ -196,6 +196,6 @@ DEFINE_PER_CPU(struct task_struct *, ksoftirqd);
 * 就是计算机内部通信的基本机制，不管是进程间还是硬件与cpu之间
 
 ## 参考
-[Linux 系统调用权威指南](http://arthurchiao.art/blog/system-call-definitive-guide-zh/)
-[IA-32 Intel开发者手册](https://pdos.csail.mit.edu/6.828/2003/readings/intelv3.pdf)
-[Interrupt and Exception Handling on the x86](https://pdos.csail.mit.edu/6.828/2004/lec/lec8-slides.pdf)
+* [Linux 系统调用权威指南](http://arthurchiao.art/blog/system-call-definitive-guide-zh/)
+* [IA-32 Intel开发者手册](https://pdos.csail.mit.edu/6.828/2003/readings/intelv3.pdf)
+* [Interrupt and Exception Handling on the x86](https://pdos.csail.mit.edu/6.828/2004/lec/lec8-slides.pdf)
