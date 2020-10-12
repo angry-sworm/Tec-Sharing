@@ -1,5 +1,10 @@
 # 中断
-
+* 中断是对cpu的劫持
+* 可编程中断的意思是，可以软硬结合
+* Interrupts and exceptions are events that indicate that a condition exists somewhere in the system, the processor, or within the currently executing program or task that requires the attention of a processor.
+* System hardware uses interrupts to handle events external to the processor, such as requests to service peripheral devices. Software can also generate interrupts by executing the INT n instruction.  
+* 系统调用原来也是中断进入到内核，现在也支持，不过不推荐了
+* 可以认为，除了正常的进程调度，若有其他事件发生，都是通过中断切入到内核的
 ## theory 
 * 基于event和time的cpu处理模型，time driven & event driven
 
@@ -17,13 +22,19 @@
 
 * 根据Intel 官方资料, 同步中断称为异常（exception），异步中断被称为中断（interrupt）
 * 中断可分为可屏蔽中断（Maskable interrupt）和非屏蔽中断（Nomaskable interrupt）
-* 异常可分为故障（fault）、陷阱（trap）、终止（abort）三类
+* 异常可分为故障（fault）、陷阱（trap）、终止（abort）三类 ![三者的区别](./assets/20201012154511.png)
 
 ## ISR(Interrupt Service Routine)实现
 * An interrupt service routine (ISR) is a software routine that hardware invokes in response to an interrupt.
 #### IRQ (interrupt request )
 * an interrupt request (or IRQ) is a **hardware signal** sent to the processor that temporarily stops a running program and allows a special program, an interrupt handler, to run instead. 
 #### IDT (Interrupt Descriptor Table)
+* idt vector definition，使用该vector中的值来索引IDT中的数据
+![idt vector，来自(https://pdos.csail.mit.edu/6.828/2003/readings/intelv3.pdf)](./assets/20201012153132.png)
+```
+1. The vectors in the range 0 through 31 are reserved by the IA-32 architecture for architecture-defined exceptions and interrupts. Not all of the vectors in this range have a currently defined function. The unassigned vectors in this range are reserved for future uses. Do not use the reserved vectors.
+2. The vectors in the range 32 to 255 are designated as user-defined interrupts and are not reserved by the IA-32 architecture. These interrupts are generally assigned to external I/O devices to enable those devices to send interrupts to the processor through one of the external hardware interrupt mechanisms.
+```
 * 一个系统表，它与每一个中断或异常向量相联系，每一个向量在表中存放的是相应的中断或异常处理程序的入口地址。内核在允许中断发生前，也就是在系统初始化时，必须把 IDT 表的初始化地址装载到 idtr 寄存器中，初始化表中的每一项。
 
   ![idtr](./assets/figure_interruptdispatching_1.png) 
@@ -172,8 +183,19 @@ DEFINE_PER_CPU(struct task_struct *, ksoftirqd);
   ...
 ```
 
+## 中断的返回
+* When the processor performs a call to the exception- or interrupt-handler procedure, it saves the current states of the EFLAGS register, CS register, and EIP register on the stack. (The CS and EIP registers provide a return instruction pointer for the handler.) If an exception causes an error code to be saved, it is pushed on the stack after the EIP value. 
+* If the handler procedure is going to be executed at the same privilege level as the interrupted procedure, the handler uses the current stack. 
+* If the handler procedure is going to be executed at a numerically lower privilege level, a stack switch occurs. When a stack switch occurs, a stack pointer for the stack to be returned to is also saved on the stack. (The SS and ESP registers provide a return stack pointer for the handler.) The segment selector and stack pointer for the stack to be used by the handler is obtained from the TSS for the currently executing task. The processor copies the EFLAGS, SS, ESP, CS, EIP, and error code information from the interrupted procedure’s stack to the handler’s stack.
+* If a stack switch occurred when calling the handler procedure, the IRET instruction switches back to the interrupted procedure’s stack on the return.
+ ![stack of interrupt](./assets/20201012165043.png)
+
+ ![return](./assets/20201012165449.png)
+
 ## signal
 * 就是计算机内部通信的基本机制，不管是进程间还是硬件与cpu之间
 
 ## 参考
 [Linux 系统调用权威指南](http://arthurchiao.art/blog/system-call-definitive-guide-zh/)
+[IA-32 Intel开发者手册](https://pdos.csail.mit.edu/6.828/2003/readings/intelv3.pdf)
+[Interrupt and Exception Handling on the x86](https://pdos.csail.mit.edu/6.828/2004/lec/lec8-slides.pdf)
