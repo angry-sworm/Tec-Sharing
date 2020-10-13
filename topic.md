@@ -34,6 +34,7 @@
 * 搜索
 * 布隆过滤器
 * 电梯算法
+* 人脸识别技术
 
 ## languge
 * 协程
@@ -56,7 +57,6 @@
 * 消息队列
 * 分布式
 * RPC
-* Web Server
-
+* Web Server 
 ## security
 * 安全算法介绍与应用
