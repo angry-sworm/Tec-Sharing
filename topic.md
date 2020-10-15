@@ -32,7 +32,7 @@
 * 动态规划
 * 贪心
 * 搜索
-* 布隆过滤器
+* [布隆过滤器](./docs/bloom-filter/bloom-filter.md)
 * 电梯算法
 * 人脸识别技术
 
