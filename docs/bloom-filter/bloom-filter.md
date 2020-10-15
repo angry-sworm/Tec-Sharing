@@ -70,4 +70,5 @@
 * [计算概率的form](https://www.di-mgt.com.au/bloom-calculator.html)
 * [推导过程](https://people.eecs.berkeley.edu/~daw/teaching/cs170-s03/Notes/lecture10.pdf)
 * [中文推导过程](https://blog.csdn.net/gaoyueace/article/details/90410735)
+* [详细推导](https://www.cnblogs.com/xiaohuiduan/p/11488020.html)
 * [概率矩阵](http://pages.cs.wisc.edu/~cao/papers/summary-cache/node8.html)
