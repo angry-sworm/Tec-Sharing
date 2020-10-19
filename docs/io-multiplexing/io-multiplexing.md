@@ -149,7 +149,7 @@ I/O 多路复用是指内核一旦发现进程指定的一个或者多个 I/O �
 
   1. 支持一个进程打开大数目的 `socket` 描述符（一般来说这个数目和系统内存关系很大，具体数目可以通过 `cat /proc/sys/fs/file-max` 来察看）。
   2. I/O 效率不会随着 `socket` 描述符数目的增加而线性下降，因为只有活跃可用的 `socket` 描述符才会调用 `callback` 函数，与连接总数量无关。
-  3. ~~使用 `mmap` 加速内核空间与用户空间的消息传递，减少复制开销。（[Memory Mapping](https://man7.org/linux/man-pages/man2/mmap.2.html)）~~（<font color=red>经查证资料，确认 epoll 在 Linux 内核中并未使用 mmap 来进行用户空间和内核空间的内存共享</font>）
+  3. ~~使用 `mmap` 加速内核空间与用户空间的消息传递，减少复制开销。（[Memory Mapping](https://man7.org/linux/man-pages/man2/mmap.2.html)）~~（**经查证资料，确认 `epoll` 在 `Linux` 内核中并未使用 `mmap` 来进行用户空间和内核空间的内存共享**）
   
 * 缺点：
 
