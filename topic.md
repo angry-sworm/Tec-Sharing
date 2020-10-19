@@ -16,7 +16,7 @@
 * TCP 粘包
 * accept干了什么
 * BGP
-* IO 多路复用
+* [I/O 多路复用](./docs/io-multiplexing/io-multiplexing.md)
 
 ## database
 * sql的语句执行过程
