@@ -53,6 +53,7 @@
 * 基数树
 * 堆
 * [倒排索引](./docs/inverted-index/inverted-inedx.md)
+* [前缀树](./docs/trie/trie.md)
 
 ## system design
 * 缓存
