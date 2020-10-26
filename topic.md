@@ -49,11 +49,9 @@
 * 跳表
 * 红黑树
 * 并查集
-* 字典树
-* 基数树
 * 堆
 * [倒排索引](./docs/inverted-index/inverted-inedx.md)
-* [前缀树](./docs/trie/trie.md)
+* [基数树、前缀树、字典树](./docs/trie/trie.md)
 
 ## system design
 * 缓存
