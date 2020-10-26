@@ -10,8 +10,8 @@
 * 搜索引擎的文本词频统计
 * 自然语言处理(NPL, Natural Language Processing)中的中文分词算法
 
-## 基本Trie树
-* ![示例](./assets/20201021215931.png)
+## 基本Trie树<br/>
+![示例](./assets/20201021215931.png)
 * 时间复杂度O(K)， K为字符串的长度
 * 特点
 ```
@@ -21,22 +21,17 @@
 ```
 #### 操作过程
 ##### 插入
-* 将单词的每个字母逐一插入Trie树。插入前先看字母对应的节点是否存在，存在则共享该节点，不存在则创建对应的节点。
-<br/>
+* 将单词的每个字母逐一插入Trie树。插入前先看字母对应的节点是否存在，存在则共享该节点，不存在则创建对应的节点。<br/>
 ![find](./assets/trie-insert.gif)
 ##### 查找
-* 从根节点开始，沿着某条路径来匹配，查找'cate'的过程如下：
-<br/>
+* 从根节点开始，沿着某条路径来匹配，查找'cate'的过程如下：<br/>
 ![find](./assets/trie-find.gif)
 ##### 删除
-* 删除整个单词
-<br/>
+* 删除整个单词<br/>
 ![delete-whole-word](./assets/trie-delete-branch-word.gif)
-* 删除前缀单词,留意颜色的变化，代表该点的"单词"属性的消失
-<br/>
+* 删除前缀单词,留意颜色的变化，代表该点的"单词"属性的消失<br/>
 ![delete-prefix-word](./assets/trie-delete-branch-word.gif)
-* 删除分支单词
-<br/>
+* 删除分支单词<br/>
 ![delete-branch-word](./assets/trie-delete-branch-word.gif)
 
 #### 实现方式
@@ -81,8 +76,7 @@ type TrieNode struct {
 base[r] + c = s
 check[s] = r
 ```
-* 示意图: 
-<br/>
+* 示意图: <br/>
 ![基本图示](./assets/trie1.png)
 ```
 * base数组的索引为0，1，…, base[s], …, S, …, T，均表示trie树的状态
@@ -92,18 +86,15 @@ check[s] = r
 #### 生成过程实例
 * 字典{a:1,b:2,c:3,d:4}
 * 用-1代表数组元素为空，-2代表叶子节点, -3代表根节点
-* 初始状态 
-<br/>
+* 初始状态 <br/>
 ![初始状态](./assets/20201025165220.png)
-* 插入acf、ca两个字符串
-<br/>
+* 插入acf、ca两个字符串<br/>
 ![insert-a-acf](./assets/insert-a-of-acf.gif)
 ![insert-c-acf](./assets/insert-c-of-acf.gif)
 ![insert-f-acf](./assets/insert-f-of-acf.gif)
 ![insert-c-ca](./assets/insert-c-of-ca.gif)
 ![insert-a-ca](./assets/insert-a-of-ca.gif)
-* 结束状态 
-<br/>
+* 结束状态 <br/>
 ![结束状态](./assets/20201025170129.png)
 
 #### 查找过程
@@ -112,8 +103,7 @@ check[s] = r
 2. 接受到c，则跳转到base数组索引T=base[S] + c，检查此时check数组的check[T] == S，为真跳转到3，否则匹配失败。
 3. 如果base[T] == LEAF_VALUE （这里LEAF_VALUE用来表示叶子节点的特殊值），则匹配完成；否则，令S = T, 跳转到2.
 * check表示出来"连续性"(上个节点的状态)，base[T]则表示是否为字符串的"终点"(当前节点的状态)
- * 动画演示 
- <br/>
+ * 动画演示 <br/>
  ![trie-find](./assets/trie-find.gif)
 
 #### 关键点
@@ -132,17 +122,13 @@ check[s] = r
 
 ## 基数树(radix tree)
 * 压缩前缀树(一种Compressed Prefix Trie), 更节省空间的Trie（前缀树），所谓压缩，就是将多个字符放在了一起
-* 例子
-<br/>
+* 例子<br/>
  ![radix-tree](./assets/20150527213439219.png)
-* 插入
-<br/>
+* 插入<br/>
  ![radix-insert](./assets/radix-insert.gif)
-* 删除
-<br/> 
+* 删除<br/> 
 ![radix-delete](./assets/radix-delete.gif)
-* trie转为radix 
-<br/>
+* trie转为radix <br/>
 ![trieconvert](./assets/20201025192130.png)
 #### radix 
 * radix的含义： Radix树的处理是以bit（或二进制数字）来读取的。一次被对比r个bit，2的r次方是radix树的基数。
