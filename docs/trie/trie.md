@@ -28,9 +28,9 @@
 ![find](./assets/trie-find.gif)
 ##### 删除
 * 删除整个单词<br/>
-![delete-whole-word](./assets/trie-delete-branch-word.gif)
+![delete-whole-word](./assets/trie-delete-whole-word.gif)
 * 删除前缀单词,留意颜色的变化，代表该点的"单词"属性的消失<br/>
-![delete-prefix-word](./assets/trie-delete-branch-word.gif)
+![delete-prefix-word](./assets/trie-delete-prefix-word.gif)
 * 删除分支单词<br/>
 ![delete-branch-word](./assets/trie-delete-branch-word.gif)
 
