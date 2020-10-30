@@ -20,7 +20,7 @@
 
 ## database
 * sql的语句执行过程
-* 索引的机制
+* [索引的机制](./docs/mysql/index.md)
 * [B+ 树](./docs/b+tree/b+tree.md)
 * 乐观锁、悲观锁
 * 事务
