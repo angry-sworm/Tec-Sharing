@@ -7,7 +7,7 @@
 * fs
 * [interrupt](./docs/interrupt/interrupt.md)
 * 进程、线程通信
-* 同步、死锁
+* [死锁](./docs/deadlock/deadlock.md)
 * dma
 
 ## network
