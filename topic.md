@@ -35,6 +35,7 @@
 * [布隆过滤器](./docs/bloom-filter/bloom-filter.md)
 * 电梯算法
 * 人脸识别技术
+* [排序](./docs/sort/sort.md)
 
 ## languge
 * 协程

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="id=edge">
+        <title>quick-sort</title>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                background: #F6F6F6;
+            }
+
+            .div1 {
+                margin: 50px auto;
+            }
+
+            #cvs {
+                margin-right: auto;
+                margin-left: auto;
+                display: block;
+                background: #FFF;
+                box-shadow: 0px 0px 1px 1px #555555;
+                margin: 10px;
+            }
+        </style>
+        <script type="text/javascript" src="assets/js/paiting.js"></script>
+        <script type="text/javascript" src="assets/js/config.js"></script>
+        <script type="text/javascript" src="assets/js/data.js"></script>
+        <script type="text/javascript" src="assets/js/event.js"></script>
+        <script type="text/javascript" src="assets/js/quicksort.js"></script>
+    </head>
+    <body>
+        <div class="div1">
+            <canvas id="cvs" width="1024" height="480"></canvas>
+            <button onclick="start()">开始</button>
+            <button onclick="pause()">暂停</button>
+            <button onclick="previous()">上一步</button>
+            <button onclick="next()">下一步</button>
+            <button onclick="reset()">重置</button>
+        </div>
+        
+        <script type="text/javascript">
+            var cvs = document.getElementById('cvs');
+            var ctx = cvs.getContext('2d');
+            painting.setContext(ctx)
+
+            quickSort.onLoad();
+            function start() {
+                quickSort.start()
+            }
+            function pause() {
+                quickSort.pause()
+            }
+            function next() {
+                quickSort.next()
+            }
+            function previous() {
+                quickSort.previous()
+            }
+            function reset() {
+                quickSort.reset()
+            }
+    </script>
+        
+</body>
+</html>
