@@ -22,7 +22,6 @@
 ## database
 * sql的语句执行过程
 * [索引的机制](./docs/mysql/index/index.md)
-* [B+ 树](./docs/b+tree/b+tree.md)
 * 乐观锁、悲观锁
 * 事务
 * 备份与恢复
@@ -55,6 +54,8 @@
 * 堆
 * [倒排索引](./docs/inverted-index/inverted-inedx.md)
 * [基数树、前缀树、字典树](./docs/trie/trie.md)
+* LSM树
+* [B+ 树](./docs/b+tree/b+tree.md)
 
 ## system design
 * 缓存
