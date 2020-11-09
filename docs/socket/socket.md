@@ -265,7 +265,7 @@
   make
   
   cd ../libfree
-  make				// 执行这一步的时候可能会报错，将libfree下的inet_ntop.c文件的第60行由                          size_t size改为socklen_t size;重新make即可
+  make				// 执行这一步的时候会报错，将libfree下的inet_ntop.c文件的第60行由`size_t size`改为`socklen_t size`即可
   
   vim ../lib/unp.h	// 修改：将#include “../config.h”修改为#include “config.h”
   ：wq
@@ -281,9 +281,9 @@
 * 编译测试（以 `tcpserv01.c` 和 `tcpcli01.c` 为例）
 
   ```c
-  gcc tcpserv01.c -o tcpserv01 -lunp	// 编译tcpserv01.c，编译时必须加上静态链接库：-l参数                                        加上libunp.a去掉lib和后面的.a。最后得到参数-lunp
+  gcc tcpserv01.c -o tcpserv01 -lunp	// 编译tcpserv01.c，编译时必须加上静态链接库：-l参数加上libunp.a，去掉lib和后面的.a得到参数-lunp
   
-  gcc tcpcli01.c -o tcpcli01 -lunp    // 编译tcpcli01.c
+  gcc tcpcli01.c -o tcpcli01 -lunp	// 编译tcpcli01.c
   
   ./tcpserv01 &						// 后台启动服务器
       
