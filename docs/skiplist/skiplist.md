@@ -38,7 +38,7 @@ return level;
 * 查找示例<br/>
 如图为查找13的路线<br/>
 ![find-process](./assets/skiplist/20201116183050.png)
-* [体验地址](http://htmlpreview.github.io/?https://github.com/angry-sworm/tec-sharing/blob/featrue_sort/docs/skiplist/skiplist.html))
+* [体验地址](http://htmlpreview.github.io/?https://github.com/angry-sworm/tec-sharing/blob/featrue_sort/docs/skiplist/skiplist.html)
 
 ## 使用软件
 * redis
