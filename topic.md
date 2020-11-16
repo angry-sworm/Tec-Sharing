@@ -49,7 +49,7 @@
 * Raft
 
 ## data structure
-* 跳表
+* [跳表](./docs/skiplist/skiplist.md)
 * 红黑树
 * 并查集
 * 堆

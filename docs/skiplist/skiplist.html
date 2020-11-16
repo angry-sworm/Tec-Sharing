@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Skip List Animation</title>
+</head>
+  <script src="./assets/js/lib/pixi.js"></script>
+  <script src="./assets/js/lib/external.js"></script>
+  <script src="./assets/js/id.js"></script>
+  <script src="./assets/js/stage.js"></script>
+  <script src="./assets/js/skiplist.js"></script>
+  <script src="./assets/js/objects.js"></script>
+  <script src="./assets/js/animation.js"></script>
+  <style>
+    button {
+      background-color: #6493a8; /* Green */
+      border: 1;
+      color: white;
+      padding: 10px 16px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    input {
+      padding: 10px 16px; 
+      font-size: 16px; 
+      line-height: 1.428571429; 
+      color: #555555; 
+      vertical-align: middle; 
+      background-color: #ffffff; 
+      border: 1px solid #cccccc; 
+      border-radius: 4px; 
+      border-color: #6493a8; 
+    }
+  </style>
+<body>
+  <div id='algorithm'>
+    <button  onclick="addElement()">add</button>
+    <button  onclick="incAndElement()">incAndadd</button>
+    <button onclick="removeElement()">remove</button>
+    <button onclick="searchElement()">search</button>
+    <input type="text" ID="inputValueText" value="1">
+    <input type="text" ID="inputValueTextStep" value="1">
+  </div>
+
+  <script type="text/javascript">
+      var vp = require("pixi-viewport");
+      var sl = new SkipList();
+      sl.init();
+      sl.layout();
+
+      function addElement() {
+        let value = document.getElementById("inputValueText").value;
+        if (value != undefined && value != "") {
+          sl.insert(parseInt(value));
+          sl.layout();
+        }
+      }
+
+      function incAndElement() {
+        let value = document.getElementById("inputValueText").value;
+        if (value != undefined && value != "") {
+          let step = document.getElementById("inputValueTextStep").value;
+          if (step != undefined && step != "") {
+            value = parseInt(value) + parseInt(step);
+            document.getElementById("inputValueTextStep").value = value;
+          }
+          sl.insert(value);
+          sl.layout();
+        }
+      }
+
+      function removeElement() {
+        let value = document.getElementById("inputValueText").value;
+        if (value != undefined && value != "") {
+          sl.delete(parseInt(value));
+          sl.layout();
+        }
+      }
+
+      function searchElement() {
+        let value = document.getElementById("inputValueText").value;
+        if (value != undefined  && value != "") {
+          sl.layout();
+          sl.search(parseInt(value));
+          //sl.layout();
+        }
+      }
+  </script>
+</body>
+</html>
