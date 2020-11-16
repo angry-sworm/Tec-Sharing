@@ -31,17 +31,14 @@ while (Math.random() < 0.2 && level < MAX_LEVEL - 1) {
 }
 return level;
 ```
-* 插入示例
-<br/>
+* 插入示例<br/>
 ![insert-ins](./assets/skiplist/sl-insert.gif)
-* 删除示例
-<br/>
+* 删除示例<br/>
 ![delete-ins](./assets/skiplist/sl-delete.gif)
-* 查找示例
-<br/>
-如图为查找13的路线
+* 查找示例<br/>
+如图为查找13的路线<br/>
 ![find-process](./assets/skiplist/20201116183050.png)
-* [体验地址](http://htmlpreview.github.io/?https://github.com/angry-sworm/tec-sharing/blob/featrue_sort/docs/sort/animation/index.html)
+
 
 ## 使用软件
 * redis
