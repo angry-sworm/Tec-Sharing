@@ -6,7 +6,7 @@
 
 
 
-![](.\assets\nonClusteredIndex.png)
+![image](./assets/MyISAMIndex.png)
 
 ## 1.2 辅助索引
 
@@ -19,13 +19,13 @@
 
 ## 2.1 主键索引
 
-![](.\assets\clusteredIndex.png)
+![image](./assets/InnoDBPrimaryIndex.png)
 
 可以看到InnoDB的主键索引的叶子节点存储了完整的数据记录。
 
 ## 2.2 辅助索引
 
-![](.\assets\clusteredSecondaryIndex.png)
+![image](./assets/InnoDBSecondaryIndex.png)
 
 与 MyISAM 索引的不同是 InnoDB 的辅助索引 data 域存储相应记录主键的值⽽不是地址指针。换句话说,InnoDB 的所有辅助索引都引⽤主键作为 data 域。  
 

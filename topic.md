@@ -17,15 +17,17 @@
 * accept干了什么
 * BGP
 * [I/O 多路复用](./docs/io-multiplexing/io-multiplexing.md)
+* 浏览器的渲染过程
+* [socket 编程](./docs/socket/socket.md)
 
 ## database
 * sql的语句执行过程
-* [索引的机制](./docs/mysql/index.md)
-* [B+ 树](./docs/b+tree/b+tree.md)
+* [索引的机制](./docs/mysql/index/index.md)
 * 乐观锁、悲观锁
 * 事务
 * 备份与恢复
 * SQL 优化
+* 聚合
 
 ## algorithm
 * [时间复杂度](./docs/timeComplexy/timeComplexy.md)
@@ -53,6 +55,8 @@
 * 堆
 * [倒排索引](./docs/inverted-index/inverted-inedx.md)
 * [基数树、前缀树、字典树](./docs/trie/trie.md)
+* LSM树
+* [B+ 树](./docs/b+tree/b+tree.md)
 
 ## system design
 * 缓存
