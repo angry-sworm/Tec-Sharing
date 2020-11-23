@@ -28,6 +28,7 @@
 * 备份与恢复
 * SQL 优化
 * 聚合
+* 数据落地机制
 
 ## algorithm
 * [时间复杂度](./docs/timeComplexy/timeComplexy.md)
