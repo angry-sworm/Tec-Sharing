@@ -17,7 +17,7 @@
 * accept干了什么
 * BGP
 * [I/O 多路复用](./docs/io-multiplexing/io-multiplexing.md)
-* 浏览器的渲染过程
+* [浏览器的原理介绍](./docs/browser/browser.md)
 * [socket 编程](./docs/socket/socket.md)
 
 ## database
