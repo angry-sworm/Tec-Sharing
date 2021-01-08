@@ -48,8 +48,11 @@
 * [符号表入门](./docs/symbol/symtab.md)
 * 引用与指针
 
-## distribution
-* Raft
+## distributed system
+* 拜占庭将军问题、CAP 理论、BASE 理论
+* Paxos 和 Raft 共识算法
+* 分布式事务
+* 分布式锁
 
 ## data structure
 * [跳表](./docs/skiplist/skiplist.md)
@@ -64,7 +67,6 @@
 ## system design
 * 缓存
 * 消息队列
-* 分布式
 * RPC
 * Web Server 
 ## security
